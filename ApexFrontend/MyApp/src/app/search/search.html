@@ -1,0 +1,19 @@
+
+<div>
+    <input type="text" #des /><button type="submit" (click)="search(des.value)">Search</button>
+</div>
+
+<div>
+  <table>
+    <tr>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Description</th>
+    </tr>
+    <tr *ngFor="let appointment of appointments">
+      <td>{{appointment.date}}</td>
+      <td>{{appointment.time}}</td>
+      <td>{{appointment.description}}</td>
+    </tr>
+  </table>
+</div>
